@@ -488,8 +488,8 @@ class SynapseStorage(BaseStorage):
                 else:
                     keySyn = str(k)
                     
-                 # Skip `Filename` and `ETag` columns when setting annotations
-                if keySyn in ["Filename", "ETag", "eTag"]:
+                 # Skip `Filename` `ETag` `EntityId` columns when setting annotations
+                if keySyn in ["Filename", "ETag", "eTag", "EntityId", "entityId"]:
                     continue
                     
                 # truncate annotation values to 500 characters if the
